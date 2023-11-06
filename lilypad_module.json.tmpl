@@ -15,7 +15,11 @@
             "bash", "-c",
             "python3 train.py 2>/dev/null"
         ],
-        "Image": "marshath/sdxl-finetune@sha256:b6378768a4e790a76e214de0936679835167da5e57156e58a20b6eba1eb590e3"
+        "Image": "marshath/sdxl-finetune@sha256:b6378768a4e790a76e214de0936679835167da5e57156e58a20b6eba1eb590e3",
+        "EnvironmentVariables": [
+            "PROMPT=a photo of a sks dog",
+            "STEPS=300"
+        ]
       },
       "Engine": "Docker",
       "Network": {
