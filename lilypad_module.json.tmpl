@@ -13,12 +13,13 @@
       "Docker": {
         "Entrypoint": [
             "bash", "-c",
-            "python3 train.py 2>/dev/null"
+            "python3 train.py 2>/dev/null",
+            "--prompt",
+            "a photo of a sks dog",
+            "--steps",
+            "300"
         ],
         "Image": "marshath/sdxl-finetune@sha256:b6378768a4e790a76e214de0936679835167da5e57156e58a20b6eba1eb590e3",
-        "EnvironmentVariables": [
-            "prompt=a photo of a sks dog"
-        ]
       },
       "Engine": "Docker",
       "Network": {
@@ -32,14 +33,6 @@
       },
       "Timeout": 1800,
       "Verifier": "Noop",
-      "inputs": [
-          {
-              "CID": "QmdZZgDnArmFw5nEbw9VssnURFz58TDCkMKEVEDcW5dD7F",
-              "Name": "sdxl_input",
-              "StorageSource": "IPFS",
-              "path": "/inputs"
-          },
-      ],
       "outputs": [
           {
               "Name": "outputs",
